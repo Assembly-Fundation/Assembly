@@ -5,12 +5,13 @@ option casemap:none
 
 ; Import System Library kernel32
 includelib kernel32.lib
+includelib msvcrt.lib
 
 ; Declare extern function prototypes
 GetStdHandle proto :DWORD
 WriteConsoleA proto :DWORD, :PTR BYTE, :DWORD, :PTR DWORD, :PTR DWORD
 ExitProcess proto :DWORD
-
+printf proto: DWORD
 .data
     hConsoleOutput dd ?
     msg db "Hello, World!", 0
