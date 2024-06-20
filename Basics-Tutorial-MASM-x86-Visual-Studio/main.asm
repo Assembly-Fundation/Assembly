@@ -1,30 +1,33 @@
-includelib kernel32.lib
-include <console.inc>
+.386
+.model flat, stdcall
+.stack 4096
+option casemap:none
 
-extern WriteConsoleA: proc
-extern GetStdHandle: proc
-extern SetConsoleTextAttribute: proc
-extern ExitProcess: proc
+; Import System Library kernel32
+includelib kernel32.lib
+
+; Declare extern function prototypes
+GetStdHandle proto :DWORD
+WriteConsoleA proto :DWORD, :PTR BYTE, :DWORD, :PTR DWORD, :PTR DWORD
+ExitProcess proto :DWORD
 
 .data
-	msg db "Hola Mundo", 0b
-.code
-	main proc
-		sub rsp, 32
-			mov rcx, console
-			call GetStdHandle
-			mov stdout, rax
-		add rsp, 32
+    hConsoleOutput dd ?
+    msg db "Hello, World!", 0
+    msgLength dd $ - offset msg
 
-		sub rsp, 32
-			mov rcx, stdout
-			lea rdx, msg
-			mov r8, lengthof msg
-			lea r9, nBytesWritten
-			call WriteConsoleA
-		add rsp, 32
-		
-		mov rcx, programEnd
-		call ExitProcess
-	main endp
-end
+.code
+main proc
+    ; Get the handle to the console output
+    invoke GetStdHandle, -11
+    mov hConsoleOutput, eax
+
+    ; Write message to console
+    invoke WriteConsoleA, hConsoleOutput, addr msg, msgLength, 0, 0
+
+    ; Exit the process
+    invoke ExitProcess, 0
+    ret
+main endp
+
+end main
