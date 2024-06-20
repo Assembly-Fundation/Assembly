@@ -23,5 +23,8 @@
     <None Include="console.inc">
       <Filter>Archivos de encabezado</Filter>
     </None>
+    <None Include="..\README.md" />
+    <None Include="..\.gitignore" />
+    <None Include="..\.gitattributes" />
   </ItemGroup>
 </Project>
