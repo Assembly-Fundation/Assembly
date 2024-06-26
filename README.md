@@ -1,6 +1,6 @@
-# Basics Tutorials For MASM x64 Visual Studio
+# Basics Tutorials For MASM on Visual Studio
 
-Practical tutorial series for familiarization with the MASM x64 assembly language in the Visual Studio IDE.
+Practical tutorial series for familiarization with the MASM assembly language in the Visual Studio IDE.
 
 A series of tutorials focused on learning syntax with simple examples.
 
