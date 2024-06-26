@@ -24,6 +24,7 @@
     <ProjectGuid>{04d8c04c-e5d8-4b5a-8a59-29cb08edd1ee}</ProjectGuid>
     <RootNamespace>Basics_Tutorial_MASM_x86_Visual_Studio</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Basics-Tutorial-MASM-x86-Visual-Studio-WinApi</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
