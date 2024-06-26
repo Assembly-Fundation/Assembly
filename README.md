@@ -1,4 +1,4 @@
-# Basics Tutorials For MASM on Visual Studio
+# Basics Tutorial For MASM x86 At Visual Studio With WinApi
 
 Practical tutorial series for familiarization with the MASM assembly language in the Visual Studio IDE.
 
