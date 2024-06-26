@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="main.asm">
+    <MASM Include="source-code\main.asm">
       <Filter>Archivos de origen</Filter>
     </MASM>
   </ItemGroup>

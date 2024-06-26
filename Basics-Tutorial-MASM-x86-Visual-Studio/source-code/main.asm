@@ -7,9 +7,9 @@ option casemap:none ; Disable case sensitivity for symbols
 includelib kernel32.lib
 
 ; Declare extern function prototypes
-GetStdHandle proto :DWORD ; Retrieves a handle for a standard input or output device (STDIN, STDOUT, STDERR).
-WriteConsoleA proto :DWORD, :PTR BYTE, :DWORD, :PTR DWORD, :PTR DWORD ; Writes a block of characters to the console.
-ExitProcess proto :DWORD ; Terminates the current process and returns an exit code.
+GetStdHandle proto : DWORD ; Retrieves a handle for a standard input or output device (STDIN, STDOUT, STDERR).
+WriteConsoleA proto : DWORD, :PTR BYTE, :DWORD, :PTR DWORD, :PTR DWORD ; Writes a block of characters to the console.
+ExitProcess proto : DWORD ; Terminates the current process and returns an exit code.
 
 .data
     ; Declare our memory address where our data will be stored

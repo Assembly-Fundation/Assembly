@@ -130,7 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <MASM Include="main.asm" />
+    <MASM Include="source-code\main.asm" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitattributes" />
